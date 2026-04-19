@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Using AI in daily life · Guanyu Huang</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#FAF8F3;--ink:#1C1A16;--ink-soft:#5A5650;--ink-muted:#9A968E;
+  --terra:#C4622D;--terra-light:#F5E8DF;--teal:#2A6B6E;--teal-light:#DDF0F0;
+  --border:rgba(100,90,80,0.15);
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'Lora',Georgia,serif;line-height:1.75;font-size:17px}
+.page{max-width:760px;margin:0 auto;padding:0 2rem}
+nav{padding:2rem 0 1.5rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)}
+.nav-name{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.08em;color:var(--ink-soft);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-name:hover{color:var(--terra)}
+.nav-links{display:flex;gap:1.5rem;list-style:none;flex-wrap:wrap}
+.nav-links a{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--ink-soft);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--terra)}
+footer{padding:2.5rem 0 3.5rem;border-top:1px solid var(--border);margin-top:3rem;display:flex;justify-content:space-between;align-items:center}
+.footer-note{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-muted);font-style:italic}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-soft);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--terra)}
+.article-header{padding:3.5rem 0 2.5rem}
+.article-meta{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.article-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--terra);text-transform:uppercase;background:var(--terra-light);padding:.25rem .75rem;border-radius:2rem}
+.article-date{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink-muted);letter-spacing:.06em}
+.article-header h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:400;line-height:1.2;letter-spacing:-.02em;margin-bottom:1rem}
+.article-header h1 em{font-style:italic;color:var(--terra)}
+.article-intro{font-size:1.05rem;color:var(--ink-soft);line-height:1.85;max-width:580px;border-left:2px solid var(--terra-light);padding-left:1.25rem;margin-top:1.5rem}
+.opening-question{font-family:'DM Mono',monospace;font-size:13px;color:var(--ink-muted);font-style:italic;margin-bottom:2rem;padding:1.25rem 1.5rem;background:white;border:1px solid var(--border);border-radius:6px;line-height:1.7}
+.article-body{padding-bottom:2rem}
+.article-body p{margin-bottom:1.5rem;line-height:1.85}
+.article-body p:last-child{margin-bottom:0}
+.article-body em{font-style:italic;color:var(--ink)}
+.article-body strong{font-weight:500}
+.article-section{margin:2.5rem 0 1rem;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--teal);text-transform:uppercase}
+.tip-block{margin:2rem 0;padding:1.25rem 1.5rem;background:white;border:1px solid var(--border);border-radius:6px}
+.tip-block .tip-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--terra);text-transform:uppercase;margin-bottom:.75rem}
+.tip-block p{margin-bottom:0;font-size:.95rem;color:var(--ink-soft)}
+.article-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:3rem 0}
+.article-nav a{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--ink-soft);text-decoration:none;text-transform:uppercase;transition:color .2s;display:flex;align-items:center;gap:.5rem}
+.article-nav a:hover{color:var(--terra)}
+.article-nav .back{color:var(--ink-muted)}
+.article-nav .next-label{font-size:9px;color:var(--ink-muted);display:block;margin-bottom:.2rem;text-align:right}
+.article-nav .next-title{font-size:11px;color:var(--ink-soft);display:block;text-align:right}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.article-header{animation:fadeUp .7s ease both}
+.article-body{animation:fadeUp .7s .1s ease both}
+@media(max-width:600px){
+  nav{flex-wrap:wrap;gap:1rem}
+  footer{flex-direction:column;gap:1rem;align-items:flex-start}
+  .article-nav{flex-direction:column;gap:1rem;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<nav>
+  <a href="index.html" class="nav-name">Guanyu Huang</a>
+  <ul class="nav-links">
+    <li><a href="index.html#journey">Journey</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="index.html#research">Research</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="article-header">
+  <div class="article-meta">
+    <span class="article-tag">Practice</span>
+    <span class="article-date">Apr 2025</span>
+  </div>
+  <h1>Using AI in<br><em>daily life</em></h1>
+  <p class="article-intro">A cognitive mirror, a prism, a co-creator — it depends on what I need.</p>
+</header>
+
+<article class="article-body">
+
+<div class="opening-question">When did you start using AI tools regularly? What drove you to it?</div>
+
+<div class="article-section">A sounding board</div>
+
+<p>It was after ChatGPT took the world by storm that I started using AI tools properly. Beyond translation and grammar correction, the first real problem AI helped me solve wasn't a work task. It was the psychological weight of learning to code.</p>
+
+<p>Looking back to 2020, my first year of the PhD, I studied alone at home during the pandemic. For someone with a little bit of programming background, hitting a bug meant hours of searching online, trying one solution after another, sometimes getting nowhere for half a day. Asking classmates from time to time felt like an imposition. Worse, without the right conceptual framework or vocabulary, I sometimes couldn't even articulate what the problem was, let alone how to look it up. It wasn't just time that drained away. It was the quiet confidence that asked: <em>can I actually do this?</em> Once I started using ChatGPT, the technical problems didn't disappear, but the feeling of being stranded did. I could ask anything, describe rather than name, follow up when something didn't work, and keep going. The cost of getting things wrong got smaller. So did the mental barrier. It felt something like peer learning — and something like what I'd call a mirror function in my research: through the response you get back, you gradually clarify what you're actually trying to do.</p>
+
+<div class="article-section">What role do AI tools play?</div>
+
+<p>From debugging code to filtering job opportunities, from translating and summarising medical documents to practising for interviews, from thinking through personal finances to working on my skating technique — the range of things I've worked through with ChatGPT, Claude, and other AI tools has kept expanding. For me, they're not purely conversational tools, and they're not substitutes that complete tasks on my behalf. They're more like collaborators in an iterative process. You go back and forth, and something gradually takes shape.</p>
+
+<p>Just as in human conversation, dialogue makes problems visible — something that can be named, examined, revised. In my exchanges with AI tools, I find the gaps in my own thinking reflected back at me. I treat them as a kind of <em>cognitive mirror</em>: when I don't like what I see, I ask whether that's actually what I meant. But the mirror can also become a prism, offering angles I hadn't considered, making visible the boundaries and options I hadn't consciously registered, helping me think about a problem more fully.</p>
+
+<p>After enough rounds of back-and-forth, I find I can define a problem more clearly, identify what I actually want, and isolate the variables that matter. Things I hadn't realised I knew — constraints, assumptions, instincts — get externalised in the process. And from there, it becomes possible to structure an approach, to turn experience into something reusable.</p>
+
+<p>For me, making thinking more visible, more precise, and more iterable matters more than saving time or improving efficiency.</p>
+
+<div class="article-section">So what role does AI play, exactly?</div>
+
+<p>It depends on what I need. Sometimes it's a translator or an amplifier — helping me say something more accurately, more naturally, more suited to the situation. When I didn't know how to write a formal complaint letter in English about a leaking window, it helped me find the right register and make a clear case. Sometimes it's a patient teacher filling in gaps in my knowledge, helping me map out the variables, risks, and trade-offs I actually care about when I'm trying to make sense of my finances. And when the goal is to move from a single case to a transferable method, it becomes something closer to a co-creator: helping to abstract what happened, distil it into a framework, turn it into something I can use again.</p>
+
+<div class="article-section">How to get the most out of AI</div>
+
+<p>AI tools are developing faster than anyone can fully track. It's hard to say where the edges are, or what the best way to use them looks like. Looking back at my own experience, here's what has actually worked for me.</p>
+
+<div class="tip-block">
+  <div class="tip-label">Bring real problems and real context</div>
+  <p>I don't usually start with an abstract instruction. I bring the actual situation — skating, investing, a work deadline — with background, constraints, goals, and sometimes even the small hesitations I can't quite name yet. The more specific and honest the input, the more useful the output. If I'm not yet sure what I need, the conversation itself usually helps clarify it, as long as I have my own sense of what a good answer would feel like.</p>
+</div>
+
+<div class="tip-block">
+  <div class="tip-label">Have realistic expectations</div>
+  <p>AI isn't magic. It's better understood as something you iterate toward a result with. The first output is rarely the right one. Pushing back, asking follow-up questions, requesting a different angle — that's where the useful version usually emerges. AI is impressive, but it also confidently gets things wrong, produces responses that sound smooth but say little, assumes premises you never agreed to, and makes complex things seem simpler than they are. All of this requires judgement on the user's part — not just domain knowledge and skills, but an understanding of the context, the stakes, and what a good outcome actually looks like.</p>
+</div>
+
+<div class="tip-block">
+  <div class="tip-label">Use it to explore before committing</div>
+  <p>In open-ended situations, you don't need to have everything figured out before you start. The speed of AI responses creates a genuinely low-cost space for trying things out. It won't get impatient. It will happily offer a completely different approach. The question of who judges which approach is better — that can be another AI, a different tool, or a person. It also depends on how much room for error the situation allows. The lower the tolerance for mistakes, the more carefully any AI-assisted output needs to be verified before it's used.</p>
+</div>
+
+<div class="tip-block">
+  <div class="tip-label">Pay attention to what it does to your relationships</div>
+  <p>After running my first 10K, I asked ChatGPT to praise me in specific detail — because my parents' response had been brief, and I needed more acknowledgement than I'd received. I've also turned to it after falling out with a friend, looking for a little understanding and comfort. At that level, I know AI can deliver. After all, it's a product designed to. But this shouldn't replace the interactions and relationships that exist in real life. We are, after all, social animals living in an actual world.</p>
+</div>
+
+<div class="article-section">How I want to use AI going forward</div>
+
+<p>I'm increasingly certain that the most important parts of being human remain: experience, judgement, values, and the ability to perceive the real world directly. I want to protect my attention, my focus, and my capacity for original thought — so that when I work with AI, I can bring better material to it, and make better use of what it gives back.</p>
+
+<p>I want the exchanges I have with AI to move from conversation toward something more durable. Many of the best interactions are worth turning into notes, templates, and a personal library of methods. Even if never shared with anyone else, they're worth keeping. That way, the value doesn't stay trapped in a single conversation — it accumulates.</p>
+
+<p>And I'm genuinely curious to explore what it looks like when AI moves from a one-off collaborator to something involved in a longer project — with a real feedback loop, real users, real revision cycles. A collaborator that stays.</p>
+
+<p>What I do know is this: I want this restless, idea-generating brain of mine to actually land things, with AI's help. To try things and see what happens. To put ideas into the world, collect what comes back, and keep going. We'll see. 🙂</p>
+
+</article>
+
+<nav class="article-nav">
+  <a href="02-research.html" class="back">← Where my research started</a>
+  <a href="04-work.html">
+    <div>
+      <span class="next-label">Next →</span>
+      <span class="next-title">Using AI as a learning designer</span>
+    </div>
+  </a>
+</nav>
+
+<footer>
+  <span class="footer-note">Growing up in a coastal town, I developed a love for seafood, mountains, and, surprisingly, snails.</span>
+  <div class="footer-links">
+    <a href="mailto:guanyu.huang@gmail.com">Email</a>
+    <a href="https://linkedin.com/in/guanyu-huang/">LinkedIn</a>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

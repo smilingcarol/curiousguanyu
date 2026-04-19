@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where my research started · Guanyu Huang</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#FAF8F3;--ink:#1C1A16;--ink-soft:#5A5650;--ink-muted:#9A968E;
+  --terra:#C4622D;--terra-light:#F5E8DF;--teal:#2A6B6E;--teal-light:#DDF0F0;
+  --border:rgba(100,90,80,0.15);
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'Lora',Georgia,serif;line-height:1.75;font-size:17px}
+.page{max-width:760px;margin:0 auto;padding:0 2rem}
+nav{padding:2rem 0 1.5rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)}
+.nav-name{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.08em;color:var(--ink-soft);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-name:hover{color:var(--terra)}
+.nav-links{display:flex;gap:1.5rem;list-style:none;flex-wrap:wrap}
+.nav-links a{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--ink-soft);text-decoration:none;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--terra)}
+footer{padding:2.5rem 0 3.5rem;border-top:1px solid var(--border);margin-top:3rem;display:flex;justify-content:space-between;align-items:center}
+.footer-note{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-muted);font-style:italic}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-soft);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--terra)}
+.article-header{padding:3.5rem 0 2.5rem}
+.article-meta{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.article-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--terra);text-transform:uppercase;background:var(--terra-light);padding:.25rem .75rem;border-radius:2rem}
+.article-date{font-family:'DM Mono',monospace;font-size:10px;color:var(--ink-muted);letter-spacing:.06em}
+.article-header h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:400;line-height:1.2;letter-spacing:-.02em;margin-bottom:1rem}
+.article-header h1 em{font-style:italic;color:var(--terra)}
+.article-intro{font-size:1.05rem;color:var(--ink-soft);line-height:1.85;max-width:580px;border-left:2px solid var(--terra-light);padding-left:1.25rem;margin-top:1.5rem}
+.opening-question{font-family:'DM Mono',monospace;font-size:13px;color:var(--ink-muted);font-style:italic;margin-bottom:2rem;padding:1.25rem 1.5rem;background:white;border:1px solid var(--border);border-radius:6px;line-height:1.7}
+.article-body{padding-bottom:2rem}
+.article-body p{margin-bottom:1.5rem;line-height:1.85}
+.article-body p:last-child{margin-bottom:0}
+.article-body em{font-style:italic;color:var(--ink)}
+.article-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:3rem 0}
+.article-nav a{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--ink-soft);text-decoration:none;text-transform:uppercase;transition:color .2s;display:flex;align-items:center;gap:.5rem}
+.article-nav a:hover{color:var(--terra)}
+.article-nav .back{color:var(--ink-muted)}
+.article-nav .next-label{font-size:9px;color:var(--ink-muted);display:block;margin-bottom:.2rem;text-align:right}
+.article-nav .next-title{font-size:11px;color:var(--ink-soft);display:block;text-align:right}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.article-header{animation:fadeUp .7s ease both}
+.article-body{animation:fadeUp .7s .1s ease both}
+@media(max-width:600px){
+  nav{flex-wrap:wrap;gap:1rem}
+  footer{flex-direction:column;gap:1rem;align-items:flex-start}
+  .article-nav{flex-direction:column;gap:1rem;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<nav>
+  <a href="index.html" class="nav-name">Guanyu Huang</a>
+  <ul class="nav-links">
+    <li><a href="index.html#journey">Journey</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="index.html#research">Research</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="article-header">
+  <div class="article-meta">
+    <span class="article-tag">Research</span>
+    <span class="article-date">Apr 2025</span>
+  </div>
+  <h1>Where my research about<br><em>human-robot interaction</em> started</h1>
+  <p class="article-intro">Before I became a researcher in HRI, I was a confused user. That experience became the central question.</p>
+</header>
+
+<article class="article-body">
+
+<div class="opening-question">Have you ever used a voice assistant? What was it like, talking to something that isn't human?</div>
+
+<p>Before I became a researcher in human-robot interaction, I was a confused user.</p>
+
+<p>I still remember the first time I had a conversation with Furhat. Looking at that humanlike face projected onto a plastic mask, hearing it speak in fluent English, I couldn't help but be impressed. But the friction came quickly. It seemed not to hear me, or not hear me clearly. Was it a connection problem? Was I not speaking clearly enough? Was it my accent? Or had it simply not heard me at all? I kept guessing, kept adjusting: my timing, my phrasing, my pace. Sometimes things seemed to flow a little better. Sometimes what had just worked stopped working entirely. The conversation became a guessing game. The robot in front of me gave no indication that anything had gone wrong. It offered no feedback, no hint, no acknowledgement of the breakdown. All the repair work fell to me. Speak slower. Pause longer. Try a different phrasing. Go again. The initial sense of wonder gradually gave way to impatience.</p>
+
+<p>That experience became the central question of my research: how does a robot's presentation shape what users perceive and how they interact? By presentation, I mean the full picture: visual design, voice design, language, and behaviours. By perception, I mean everything a user brings to the encounter — their prior experience with voice technology, their expectations before meeting the robot, their reactions on first contact, and the texture of the actual interaction. The mismatch in human-robot interaction, I found, operates on two levels: between what the robot projects and what it can actually do, and between what the user expects and what they actually experience.</p>
+
+<p>In my research, I found that these mismatches have multiple sources, including the mechanics of the interaction itself, the way the human brain processes and makes sense of what it encounters, and the assumptions embedded in the design of the robot. Mismatch, as it turns out, is neither rare nor catastrophic. It happens in human-to-human interaction too. What matters is how we reduce it where possible, and what happens when it occurs anyway. When the entire burden of calibration falls on the user — adjusting yourself, figuring it out, trying again — the experience becomes quietly demoralising. People assume they're doing something wrong, not realising the problem was built into the design.</p>
+
+<p>I also began to understand the underlying logic and the limits of AI in interaction. Predicting the future from the past is a genuinely powerful idea, but accuracy depends on the granularity of the data. In speech interaction, part of the imperfection comes from information that gets lost in translation from voice to text: tone, pause, emotion. These are the things that disappear on the page when transcribed into text, and yet are often the hardest parts of human communication to replace. Technology is improving fast. Subtle cues, contextual information, even environmental factors — signals that were once impossible to capture are increasingly being factored in. This improves how accurately meaning is transmitted. But better signal transmission doesn't dissolve interactional mismatch. Because interaction is built on how the other party understands and constructs meaning, and that process is always shaped by prior knowledge and initial expectation. The gap will remain. How to close it, in the middle of an actual interaction, is still very much worth studying.</p>
+
+</article>
+
+<nav class="article-nav">
+  <a href="01-entry.html" class="back">← How I got here</a>
+  <a href="03-daily-life.html">
+    <div>
+      <span class="next-label">Next →</span>
+      <span class="next-title">Using AI in daily life</span>
+    </div>
+  </a>
+</nav>
+
+<footer>
+  <span class="footer-note">Growing up in a coastal town, I developed a love for seafood, mountains, and, surprisingly, snails.</span>
+  <div class="footer-links">
+    <a href="mailto:guanyu.huang@gmail.com">Email</a>
+    <a href="https://linkedin.com/in/guanyu-huang/">LinkedIn</a>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
